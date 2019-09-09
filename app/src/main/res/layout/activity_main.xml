@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.yousef96.ledcontrol.MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/lin1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/holo_blue_bright"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:text="security system"
+            android:textColor="#fff"
+            android:textSize="30sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:id="@+id/lin2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/lin9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btn_alarm"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="150dp"
+                    android:layout_weight="0"
+                    android:background="@drawable/circul"
+                    android:src="@drawable/ic_alarm" />
+
+                <TextView
+                    android:id="@+id/txtalarm"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="1dp"
+                    android:text="New Alarts updated Just Now"
+                    android:textColor="#4b4545"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btn_motion"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_weight="0"
+                    android:background="@drawable/circul"
+                    android:src="@drawable/ic_motion" />
+
+                <TextView
+                    android:id="@+id/txtmotion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:text="Motion Detected 5 Min Ago"
+                    android:textColor="#4b4545"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lin4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lin1"
+        android:background="#333333"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+
+        <ImageButton
+            android:id="@+id/activated"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/activated"
+            android:background="@drawable/borderstyle3"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="15dp"
+            android:text="Activated" />
+
+        <ImageButton
+            android:id="@+id/AlarmOff"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_alarmoff"
+            android:background="@drawable/borderstyle3"
+            android:layout_marginRight="20dp"
+            android:onClick="onClick_Alarmoff"
+            android:text="Activated" />
+
+        <ImageButton
+            android:id="@+id/cam"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/camera"
+            android:background="@drawable/borderstyle3"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="1dp"
+            android:onClick="onClick_camera"
+            android:text="Activated" />
+
+        <ImageButton
+            android:id="@+id/speech_rec"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mic"
+            android:background="@drawable/borderstyle3"
+            android:layout_marginTop="1dp"
+            android:text="Activated" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lin5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lin4"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_maxTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="72°"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+            android:id="@+id/txt_setTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="SET TEMP"
+            android:textColor="#000"
+            android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_ActialTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:text="ACTUAL:25"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_downTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/borderstyle"
+            android:onClick="onClick_down"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:src="@drawable/downtemp" />
+
+        <ImageView
+            android:id="@+id/img_upTemp"
+            android:layout_width="wrap_content"
+            android:background="@drawable/borderstyle2"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:onClick="onClick_up"
+            android:layout_marginLeft="40dp"
+            android:src="@drawable/uptemp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lin6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lin5"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/lin7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="1">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/key"
+                    android:layout_marginLeft="35dp"/>
+                <TextView
+                    android:id="@+id/txtlocks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Locks"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginLeft="25dp"
+                    android:textSize="20sp"
+                    android:layout_alignTop="@+id/stickyBtnTestActivity2"
+                    android:textColor="#000"/>
+
+            </LinearLayout>
+
+
+        <io.ghyeok.stickyswitch.widget.StickySwitch
+        android:id="@+id/stickyBtnTestActivity_lock"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:iconPadding="10dp"
+        app:iconSize="20dp"
+        app:leftIcon="@drawable/ic_lock"
+        app:rightIcon="@drawable/ic_unlock"
+        app:selectedTextSize="14sp"
+        app:sliderBackgroundColor="@color/colorUnLcok"
+        app:switchColor="@color/colorLock"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="0.25" />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:src="@drawable/roomlight"/>
+                <TextView
+                    android:id="@+id/txtlight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Lights"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="25dp"
+                    android:textColor="#000"
+                    android:layout_marginRight="60dp"
+                    android:layout_below="@+id/stickyBtnTestActivity2"
+                    android:layout_alignRight="@+id/txtlocks"
+                    android:layout_alignEnd="@+id/txtlocks" />
+
+            </LinearLayout>
+
+        <io.ghyeok.stickyswitch.widget.StickySwitch
+        android:id="@+id/stickyBtnTestActivity_light"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:iconPadding="10dp"
+        app:iconSize="20dp"
+        app:switchColor="@color/colorOn"
+        app:sliderBackgroundColor="@color/colorOff"
+        app:leftIcon="@drawable/ic_on"
+        app:rightIcon="@drawable/ic_off"
+        app:selectedTextSize="14sp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="0.24" />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
